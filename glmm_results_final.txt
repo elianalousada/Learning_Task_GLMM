@@ -1,0 +1,111 @@
+========== Performance Model ==========
+                    Mixed Linear Model Regression Results
+=============================================================================
+Model:                    MixedLM       Dependent Variable:       Performance
+No. Observations:         100           Method:                   REML       
+No. Groups:               25            Scale:                    0.0064     
+Min. group size:          4             Log-Likelihood:           81.9942    
+Max. group size:          4             Converged:                Yes        
+Mean group size:          4.0                                                
+-----------------------------------------------------------------------------
+                                  Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------------------
+Intercept                          0.770    0.044  17.328 0.000  0.683  0.857
+Learning_stage[T.early]           -0.061    0.023  -2.694 0.007 -0.106 -0.017
+Learning_stage[T.late]             0.006    0.023   0.262 0.793 -0.039  0.050
+Learning_stage[T.naïve]           -0.411    0.023 -18.096 0.000 -0.455 -0.366
+Sex[T.male]                        0.040    0.035   1.146 0.252 -0.028  0.108
+Genotype[T.DAT_wt]                -0.029    0.038  -0.749 0.454 -0.104  0.046
+Genotype[T.Foxp2_wt]               0.030    0.038   0.771 0.441 -0.046  0.105
+Genotype[T.Sapap3_wt_x_Pvcre_htz]  0.021    0.033   0.639 0.523 -0.043  0.085
+Group Var                          0.002    0.016                            
+=============================================================================
+
+
+========== Number of Trials Model ==========
+                     Mixed Linear Model Regression Results
+===============================================================================
+Model:                   MixedLM      Dependent Variable:      Number_of_Trials
+No. Observations:        100          Method:                  REML            
+No. Groups:              25           Scale:                   2971.1891       
+Min. group size:         4            Log-Likelihood:          -512.3868       
+Max. group size:         4            Converged:               Yes             
+Mean group size:         4.0                                                   
+-------------------------------------------------------------------------------
+                                   Coef.  Std.Err.   z    P>|z|  [0.025  0.975]
+-------------------------------------------------------------------------------
+Intercept                         261.896   23.699 11.051 0.000 215.448 308.345
+Learning_stage[T.early]            39.360   15.417  2.553 0.011   9.143  69.577
+Learning_stage[T.late]             13.960   15.417  0.905 0.365 -16.257  44.177
+Learning_stage[T.naïve]            28.320   15.417  1.837 0.066  -1.897  58.537
+Sex[T.male]                       -39.473   17.833 -2.213 0.027 -74.425  -4.521
+Genotype[T.DAT_wt]                -22.961   19.766 -1.162 0.245 -61.702  15.781
+Genotype[T.Foxp2_wt]              -60.123   19.766 -3.042 0.002 -98.864 -21.381
+Genotype[T.Sapap3_wt_x_Pvcre_htz] -39.440   16.937 -2.329 0.020 -72.637  -6.244
+Group Var                         184.014    6.078                             
+===============================================================================
+
+
+========== PRT Model ==========
+                   Mixed Linear Model Regression Results
+============================================================================
+Model:                   MixedLM        Dependent Variable:        PRT      
+No. Observations:        100            Method:                    REML     
+No. Groups:              25             Scale:                     0.5803   
+Min. group size:         4              Log-Likelihood:            -127.5671
+Max. group size:         4              Converged:                 Yes      
+Mean group size:         4.0                                                
+----------------------------------------------------------------------------
+                                  Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------------------------
+Intercept                          3.226    0.473  6.815 0.000  2.298  4.154
+Learning_stage[T.early]            0.568    0.215  2.635 0.008  0.146  0.990
+Learning_stage[T.late]            -0.067    0.215 -0.310 0.757 -0.489  0.355
+Learning_stage[T.naïve]            2.587    0.215 12.006 0.000  2.164  3.009
+Sex[T.male]                        1.663    0.373  4.460 0.000  0.932  2.394
+Genotype[T.DAT_wt]                 1.180    0.413  2.855 0.004  0.370  1.990
+Genotype[T.Foxp2_wt]               1.127    0.413  2.726 0.006  0.317  1.937
+Genotype[T.Sapap3_wt_x_Pvcre_htz]  0.025    0.354  0.071 0.943 -0.669  0.719
+Group Var                          0.260    0.190                           
+============================================================================
+
+
+========== Post-hoc Performance ==========
+Multiple Comparison of Means - Tukey HSD, FWER=0.05 
+====================================================
+group1 group2 meandiff p-adj   lower   upper  reject
+----------------------------------------------------
+   Int  early  -0.0612  0.105 -0.1307  0.0083  False
+   Int   late    0.006  0.996 -0.0636  0.0755  False
+   Int  naïve  -0.4109    0.0 -0.4804 -0.3413   True
+ early   late   0.0671 0.0624 -0.0024  0.1367  False
+ early  naïve  -0.3497    0.0 -0.4192 -0.2802   True
+  late  naïve  -0.4168    0.0 -0.4863 -0.3473   True
+----------------------------------------------------
+
+========== Post-hoc Number of Trials ==========
+ Multiple Comparison of Means - Tukey HSD, FWER=0.05 
+=====================================================
+group1 group2 meandiff p-adj   lower    upper  reject
+-----------------------------------------------------
+   Int  early    39.36 0.1033  -5.2297 83.9497  False
+   Int   late    13.96 0.8456 -30.6297 58.5497  False
+   Int  naïve    28.32 0.3502 -16.2697 72.9097  False
+ early   late    -25.4 0.4479 -69.9897 19.1897  False
+ early  naïve   -11.04 0.9162 -55.6297 33.5497  False
+  late  naïve    14.36 0.8343 -30.2297 58.9497  False
+-----------------------------------------------------
+
+========== Post-hoc PRT ==========
+Multiple Comparison of Means - Tukey HSD, FWER=0.05
+===================================================
+group1 group2 meandiff p-adj   lower  upper  reject
+---------------------------------------------------
+   Int  early   0.5678 0.2437 -0.2221 1.3578  False
+   Int   late  -0.0668 0.9962 -0.8568 0.7232  False
+   Int  naïve   2.5867    0.0  1.7968 3.3767   True
+ early   late  -0.6346 0.1603 -1.4246 0.1553  False
+ early  naïve   2.0189    0.0  1.2289 2.8089   True
+  late  naïve   2.6535    0.0  1.8636 3.4435   True
+---------------------------------------------------
+
